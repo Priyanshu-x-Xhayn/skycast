@@ -1,0 +1,13 @@
+
+.current-tab
+{
+    background-color: #DDAF4B;
+    border-radius: 4px;
+    padding: 5px;  
+
+}
+.wrapper-big
+{
+    width: 100vw;
+    height: 100vh;
+}

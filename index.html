@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .current-tab {
+            background-color: #DDAF4B;
+            border-radius: 4px;
+            padding: 5px;
+        }
+
+        .wrapper-big {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-tr from-[#4d0303] to-[#860303] min-h-screen">
+    <div class="wrapper-big overflow-x-hidden flex justify-center p-10">
+        <div class="wrapper w-96">
+            <h1 class="font-bold text-center text-[#DDAF4B] text-4xl font-serif">SKYCAST</h1>
+            <div class="flex justify-between items-center font-medium my-5">
+                <div class="yourWeatherb p-3 mt-2 rounded-xl font-black cursor-pointer" data-your-weather>YOUR WEATHER</div>
+                <div class="SearchWeather p-3 mt-2 rounded-xl font-black cursor-pointer" data-search-weather>SEARCH WEATHER</div>
+            </div>
+            <div class="loading-container flex text-[#DDAF4B] flex-col items-center hidden">
+                <img src="./Images/loading.gif" width="200" height="50" alt="">
+                <p class="text-2xl">Loading...</p>
+            </div>
+            <div class="location-container flex flex-col items-center gap-6 hidden">
+                <div class="w-24 h-24 bg-[#DDAF4B] relative flex justify-center items-center rounded-full">
+                    <img src="./Images/location.png" width="16" height="16" alt="">
+                </div>
+                <h2 class="font-mono font-semibold text-[#DDAF4B] text-lg">Grant Location Access</h2>
+                <div class="font-mono font-thin text-[#DDAF4B] text-sm">Allow access to get weather information</div>
+                <button class="grant-access bg-[#DDAF4B] p-3 mt-2 rounded-xl font-black cursor-pointer" data-grant-button>GRANT ACCESS</button>
+            </div>
+            <div class="search-container flex mt-7 justify-between hidden">
+                <input type="text" placeholder="Enter city name" class="min-w-[300px] pl-7 rounded-3xl" data-search-city>
+                <button class="searchBtn bg-[#DDAF4B] p-3 mt-2 rounded-xl font-black cursor-pointer" data-search-button>Search</button>
+            </div>
+            <div class="your-weather-container min-w-[500px] gap-6 p-6 flex  flex-col justify-center items-center hidden" data-your-container>
+                <div class="min-w-[500px] relative -left-14 gap-6 p-6 flex flex-col justify-center items-center bg-gradient-to-tr drop-shadow-sm border-black border-1 rounded-3xl">
+                    <div class="flex items-center gap-5">
+                        <div class="cityname font-mono font-semibold text-[#DDAF4B] text-lg"></div>
+                        <img src="" class="countryFlag" width="30" height="20" alt="">
+                    </div>
+                    <div class="weatherDesc font-mono text-[#DDAF4B] text-lg"></div>
+                    <img src="" class="weather-img" width="30" height="20" alt="">
+                    <div class="temp font-mono text-[#DDAF4B] text-lg"></div>
+                </div>
+                <div class="card-container relative -left-20 gap-3 flex justify-around w-[60%] mx-auto">
+                    <div class="card w-[40%] flex flex-col items-center justify-evenly bg-[#DDAF4B] p-3 mt-2 rounded-xl">
+                        <img src="./Images/wind.png" width="20" height="20" alt="">
+                        <div class="font-black text-lg" data-windspeed>Windspeed</div>
+                        <div class="windspeed font-black"></div>
+                    </div>
+                    <div class="card w-[40%] items-center flex flex-col justify-evenly bg-[#DDAF4B] p-3 mt-2 rounded-xl">
+                        <img src="./Images/humidity.png" width="20" height="20" alt="">
+                        <div class="font-black text-lg" data-humidity>Humidity</div>
+                        <div class="humidity font-black"></div>
+                    </div>
+                    <div class="card w-[40%] items-center flex flex-col justify-evenly bg-[#DDAF4B] p-3 mt-2 rounded-xl">
+                        <img src="./Images/cloud.png" width="20" height="20" alt="">
+                        <div class="font-black text-lg" data-clouds>Clouds</div>
+                        <div class="clouds font-black"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
